@@ -1,3 +1,4 @@
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # Initialization code that may require console input (password prompts, [y/n]
@@ -115,8 +116,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # Add Cargo to Path
-export PATH=”~/.cargo/bin:$PATH”
-
+export PATH="$HOME/.cargo/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -124,6 +124,13 @@ export NVM_DIR="$HOME/.nvm"
 
 
 eval $(thefuck --alias)
+
+#Alias it up for lsd
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 
 
 neofetch
